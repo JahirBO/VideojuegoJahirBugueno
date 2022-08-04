@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Style/style.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <title>Contacto</title>
     <link
     rel="stylesheet"
@@ -12,14 +13,12 @@
   />
   </head>
   <body class="body__contacto animate__animated animate__fadeIn ">
-    <header class="header__contenedor">
-      <div class="header__div">
-        <a class="header__img" href="../index.html"
-          ><img class="header__img"
-            src="../Imagenes/logo-Godofwar.jpg"
-            alt="logo god of war"
-        /></a>
-        <nav class="menu">
+    <header class="header__contenedor container">
+      <div class="header__div row">
+          <div class="header__imagen">
+        <a class="col-4" href="../index.html"><img class="header__img" src="../Imagenes/logo-Godofwar.jpg" alt="logo god of war"></a>
+      </div>
+        <nav class="menu col-6">
           <ul class="menu__ul">
             <li class="menu__list">
               <a href="../pages/historia.html">
@@ -44,13 +43,12 @@
       </div>
     </header>
     <div class="contacto__fondo">
-      <form class="contacto__imagen">
-        <fieldset class="contacto__form">
+      <form class="contacto__imagen container">
+        <fieldset class="contacto__form row ">
           <legend class="parrafo">Contacto</legend>
-
-          <label class="parrafo" for="Nombre">Nombre:</label>
+          <label class="parrafo col-sm-3 col-md-3" for="Nombre">Nombre:</label>
           <input
-            class="textArea"
+            class="textArea col-sm-9 col-md-8"
             class="parrafo"
             type="text"
             name="Nombre"
@@ -59,9 +57,9 @@
             required
           />
           <br />
-          <label class="parrafo" for="Apellido"> Apellido</label>
+          <label class="parrafo  col-sm-3 col-md-3" for="Apellido"> Apellido</label>
           <input
-            class="textArea"
+            class="textArea col-sm-9 col-md-8"
             class="parrafo"
             type="text"
             name="Apellido"
@@ -70,9 +68,9 @@
             required
           />
           <br />
-          <label class="parrafo" for="Correo">Correo</label>
+          <label class="parrafo col-sm-3 col-md-3" for="Correo">Correo</label>
           <input
-            class="textArea"
+            class="textArea col-sm-9 col-md-8"
             class="parrafo"
             type="email"
             name="Correo"
@@ -81,42 +79,42 @@
             required
           />
           <br />
-          <label class="parrafo" for="Pais">País</label>
-          <select class="parrafo" name="Pais" id="Pais" required>
-            <option class="parrafo" value="Chile">Chile</option>
-            <option class="parrafo" value="Argentina">Argentina</option>
-            <option class="parrafo" value="México">México</option>
-            <option class="parrafo" value="Peru">Peru</option>
+          <label class="parrafo col-sm-3 col-md-3" for="Pais">País</label>
+          <select class="parrafo__black col-sm-9 col-md-8" name="Pais" id="Pais" required>
+            <option class="parrafo__black" value="Chile">Chile</option>
+            <option class="parrafo__black" value="Argentina">Argentina</option>
+            <option class="parrafo__black" value="México">México</option>
+            <option class="parrafo__black" value="Peru">Peru</option>
           </select>
           <br />
-          <label class="parrafo" for="Genero">Genero:</label>
+          <label class="parrafo col-sm-3 col-md-12" for="Genero">Genero:</label>
           <br />
-          <label class="parrafo" for="Genero">Masculino</label>
+          <label class="parrafo col-sm-3 col-md-6" for="Genero">Masculino</label>
           <input
-            class="textArea"
+            class="textArea col-sm-3 col-md-3"
             class="parrafo"
             type="radio"
             name="Genero"
             value="Masculino"
           />
-          <label class="parrafo" for="Genero">Femenino</label>
+          <label class="parrafo col-sm-3 col-md-6" for="Genero">Femenino</label>
           <input
-            class="textArea"
+            class="textArea col-sm-3 col-md-3"
             class="parrafo"
             type="radio"
             name="Genero"
             value="Femenino"
           />
-          <label class="parrafo" for="Genero">Otro</label>
+          <label class="parrafo col-sm-3 col-md-6" for="Genero">Otro</label>
           <input
-            class="textArea"
+            class="textArea col-sm-2 col-md-3"
             class="parrafo"
             type="radio"
             name="Genero"
             value="Otro"
           />
           <br />
-          <label class="parrafo" for="Comentario">Comentario:</label>
+          <label class="parrafo col-sm-3 col-md-12" for="Comentario">Comentario:</label>
           <br />
           <textarea
             class="BoxTextArea"
@@ -130,8 +128,7 @@
           </textarea>
           <br />
           <input
-            class="btn"
-            class="parrafo"
+            class="parrafo btn btn-dark btn-block"
             type="submit"
             name="Enviar"
             id="Enviar"

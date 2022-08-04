@@ -5,22 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Style/style.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <title>Historia</title>
-  </head>
-  <body class="body__historia animate__animated animate__fadeIn ">
-    <header class="header__contenedor">
-      <div class="header__div">
-        <a class="header__img" href="../index.html"
-          ><img
-            class="header__img"
-            src="../Imagenes/logo-Godofwar.jpg"
-            alt="logo god of war"
-        /></a>
-        <nav class="menu">
+    <header class="header__contenedor container">
+      <div class="header__div row">
+          <div class="header__imagen">
+        <a class="col-4" href="../index.html"><img class="header__img" src="../Imagenes/logo-Godofwar.jpg" alt="logo god of war"></a>
+      </div>
+        <nav class="menu col-6">
           <ul class="menu__ul">
             <li class="menu__list">
               <a href="../pages/historia.html">
@@ -46,10 +42,13 @@
         </nav>
       </div>
     </header>
+    <body class="body__historia">
     <main class="historia__fondo">
       <div class="historia__imagen">
-        <article class="articulo__ragnarok">
-          <h2 class="subtitulo">Ragnarök</h2>
+        <div class="container">
+          <div class="row">
+        <article class="articulo__ragnarok  col-sm-12 col-md-6 col-lg-5">
+          <h2 class="subtitulo container">Ragnarök</h2>
           <p class="parrafo">
             El Ragnarok es la batalla definitiva de la mitología nórdica. El
             evento que sentenciará todos los reinos regentados por Asgard y al
@@ -63,8 +62,8 @@
             y tinieblas.
           </p>
         </article>
-        <article class="articulo__kratos">
-          <h2 class="subtitulo">Kratos y Atreus</h2>
+        <article class="articulo__kratos  col-sm-12 col-md-6 col-lg-5" row>
+          <h2 class="subtitulo container">Kratos y Atreus</h2>
           <p class="parrafo">
             Kratos y Atreus deberán viajar a cada uno de los nueve reinos en
             busca de respuestas para prepararse para la profetizada batalla que
@@ -78,6 +77,8 @@
             su familia y la de los reinos...
           </p>
         </article>
+      </div>
+      </div>
       </div>
     </main>
 

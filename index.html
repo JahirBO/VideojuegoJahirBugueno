@@ -6,65 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./Style/style.css">
     <title class="parrafo">Ragnarök</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
 </head>
-<body class="body__index animate__animated animate__fadeIn ">
-    <header class="header__contenedor">
-        <div class="header__div">
-          <a  href="./index.html"><img class="header__img" src="./Imagenes/logo-Godofwar.jpg" alt="logo god of war"></a>
-          <nav class="menu">
+<body class="body__index animate__animated animate__fadeIn">
+    <header class="header__contenedor container">
+        <div class="header__div row">
+            <div class="header__imagen">
+            <a href="./index.html"><img class="header__img" src="./Imagenes/logo-Godofwar.jpg" alt="logo god of war"></a>
+        </div>
+          <nav class="menu  navbar navbar-expand-sm navbar-dark">
           <ul class="menu__ul">
-             <li class="menu__list"> <a href="./pages/historia.html"> <p class="parrafo">Historia</p></a></li>
-             <li class="menu__list"> <a href="./pages/personajes.html"><p class="parrafo">Personajes</p></a></li>
-             <li class="menu__list"> <a href="./pages/multimedia.html"><p class="parrafo">Multimedia</p></a></li>
-             <li class="menu__list"> <a href="./pages/contacto.html"><p class="parrafo">Contacto</p></a></li>
+             <li class="menu__list "> <a href="./pages/historia.html"> <p class="parrafo">Historia</p></a></li>
+             <li class="menu__list "> <a href="./pages/personajes.html"><p class="parrafo">Personajes</p></a></li>
+             <li class="menu__list "> <a href="./pages/multimedia.html"><p class="parrafo">Multimedia</p></a></li>
+             <li class="menu__list "> <a href="./pages/contacto.html"><p class="parrafo">Contacto</p></a></li>
           </ul>
            </nav>
          </div>
       </header><!-- fin Barra de navegación-->
-    <main class="resumen">
-        <div class="contenedor__imagen">
-        <img class="resumen__imginicio" src="./Imagenes/Inicio.jpeg" alt="Inicio">
+    <main class="resumen container">
+        <div class="contenedor__imagen row">
+        <img class="resumen__imginicio container col-12" src="./Imagenes/Inicio.jpeg" alt="Inicio">
         </div>
         <div class="resumen__principal">
-            <div class="resumen__div">
+            <div class="resumen__div container">
+                <div class="container">
              <img class="resumen__img" src="./Imagenes/Multimedia/Multimedia-2.jpeg" alt="Hacha">
-            <div class="resumen__parrafo">
+            <div class="resumen__parrafo row">
                 <h2 class="subtitulo">Armas de guerra</h2>
-                <p class="parrafo">El hacha Leaviatán, las Espadas del Caos y el escudo de Guardián
+                <p class="parrafo col-md-12">El hacha Leaviatán, las Espadas del Caos y el escudo de Guardián
                     regresan junto con un gran número de nuevas habilidades para Kratos y Atreus.
                      Sus viajes por los nueve reinos pondrán a prueba las letales habilidades 
                     espartanas de Kratos como nunca antes en su lucha por proteger a su familia.
                 </p>
             </div>
             </div>
-    <div class="resumen__div">
+            </div>
+    <div class="resumen__div container">
+        <div class="container ">
         <img class="resumen__img" src="./Imagenes/Multimedia/multimedia-1.jpeg" alt="explora">
-        <div class="resumen__parrafo">
+        <div class="resumen__parrafo row">
         <h2 class="subtitulo">Explora los 9 reinos</h2>
-        <Viaja class="parrafo">Viaja a entornos increíbles y peligrosos, enfréntate a una gran variedad
+        <Viaja class="parrafo col-md-12">Viaja a entornos increíbles y peligrosos, enfréntate a una gran variedad
          de criaturas, monstruos y dioses nórdicos enemigos, y ayuda a Kratos y 
          Atreus a encontrar respuestas y aliados.
         </p>
+    </div>
         </div>
     </div>
-    <div class="resumen__div">
+    <div class="resumen__div container">
+        <div class="container ">
         <img class="resumen__img" src="./Imagenes/Multimedia/Multimedia-3.jpeg" alt="destino">
-        <div class="resumen__parrafo">
+        <div class="resumen__parrafo row ">
         <h2 class="subtitulo">Aquellos que desafían al destino</h2>
-        <p class="parrafo">Atreus busca información que lo ayude a entender la profecía de "Loki"
+        <p class="parrafo col-md-12">Atreus busca información que lo ayude a entender la profecía de "Loki"
          y el papel que desempeñará en el Ragnarök. Kratos debe decidir entre
           someterse al miedo de repetir sus errores o dejar atrás el pasado y
            convertirse en el padre que Atreus necesita. 
         </p>
+    </div>
         </div>
     </div>
     </div>
     </main>
-    <footer class="iconos">    
+    <footer class="iconos container">    
         <div>
             <p class="parrafo">Derechos reservados 2022</p>
             <p class="parrafo">Síguenos en:</p>
