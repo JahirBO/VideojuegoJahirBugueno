@@ -1,0 +1,534 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+}
+@font-face {
+    font-family: Norse;
+    src: url(../Berserker-Regular.otf);
+}
+/* VARIABLES */
+$color_principal:black;
+$color_hover:rgba(0, 0, 0, 0.6);
+$color_fuente: white;
+
+
+.color__fondo{
+   background-color: black;
+}
+
+
+.parrafo{
+    font-family: Norse;
+    font-size: 2rem;
+    color: $color_fuente;
+}
+/* CSS DE INDEX.HTML */
+.body__index{
+    height: 100%;
+    background-color: $color_principal;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3,auto);
+}
+.header__contenedor{
+    background-color: $color_principal;
+    width: 100%;
+    clear: both;
+    contain: '';
+    display: grid;
+    grid-column:  1/-1;
+    
+}
+.header__div{
+    width: 90rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.header__img{
+    height: 12rem;
+    
+}
+.menu__ul{
+    display: flex; 
+}
+.menu__list{
+    list-style: none;
+    margin: 1.5rem 0;
+    margin-left: 2.5rem;
+    padding: 2.5rem 0;
+    flex-direction: column;
+}
+.subtitulo{
+    text-transform: uppercase;
+    font-family: Norse;
+    font-size: 2.2rem;
+    color: $color_fuente;
+    margin: 1rem;
+}
+.resumen{
+    grid-row: 2/2;
+}
+.resumen__principal{
+    display: flex;
+    justify-content: center;
+}
+
+.resumen__div{
+    width: 35rem;
+    margin: 5rem;
+}
+.resumen__imginicio{
+    border-radius: 5rem;
+    height: auto;
+    justify-content: center;
+    width: 90vw;
+    margin: 0 0 0 7rem;
+}
+.resumen__img{
+    border-radius: 1rem;
+   height: 240px;
+   
+}
+
+.iconos{
+    background-color: $color_principal;
+    margin: 0px auto;
+    text-align: center;
+    bottom: auto;
+    grid-row: 3;
+    
+}
+/* MEDIA QUERIES MOVIL 320px DE INDEX*/
+@media (min-width: 320px) and (max-width: 599px){
+    .body__index{
+        gap: 0rem;
+        margin: 0;
+        padding: 0;
+        grid-template-columns: 1fr;
+    }
+    .header__contenedor{
+        width: 380px;
+        
+    }
+    .header__img{
+        margin: 0 3rem 0 6rem;
+    }
+
+    .resumen__div{
+        width: 35rem;
+        margin: 2rem 0;
+    }
+    .menu__ul{
+        display: block; 
+        padding: 3rem;
+    }
+    .resumen{
+        height: auto;
+        width: auto;
+    }
+    .resumen__principal{
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    }
+    .contenedor__imagen{
+        overflow: hidden;
+        height: auto;
+        width: 350px;
+        border-radius: 5rem;
+        display: flex;
+        justify-content: center;
+        margin: 3rem;
+
+    }
+    .resumen__imginicio{
+       height: auto;
+       width: 900px;
+    }
+    .resumen__img{
+        border-radius: 1rem;
+       height: 200px;
+       
+    }
+    .header__div{
+        display: flex;
+        width: 30rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu__list{
+        list-style: none;
+        margin: 0;
+        margin-left:1rem;
+        padding: 0.5rem;
+    }
+    .header__img{
+        height: auto;
+        width: 350px;  
+     }
+}
+/* MEDIA QUERIES DE TABLET 768px INDEX*/
+@media (min-width: 600px) and (max-width: 1023px){
+
+    .header__div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+       width: 0;
+    }
+    .resumen__imginicio {
+        margin: 0 0 0 4rem;
+    }
+    .resumen__img {
+        border-radius: 4rem;
+        height: 350px;
+    }
+    .resumen__principal {
+        flex-direction: column;
+    }
+    
+}
+
+
+/* CSS DE HISTORIA.HTML */
+.body__historia{
+    background-color: $color_principal;
+    height: 80rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,auto);
+}
+.historia__fondo{
+     height: 55rem;
+    background-color: $color_principal;
+    grid-row: 2/2;
+    
+}
+.historia__imagen{
+    background-image: url(../Imagenes/Historia.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    background-size: 100%;
+    border-radius: 5rem;
+    margin: 0 6rem;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr;
+    }
+.articulo__ragnarok{
+    width: 50rem;
+    height: 49rem;
+    text-align: center;
+    margin: 3rem 6rem 5rem 0rem;
+    padding: 1rem;
+    grid-column: 1/1;
+}
+.articulo__kratos{
+    width: 50rem;
+    height: 49rem;
+    text-align: center;
+    margin: 3rem 0rem 5rem 6rem;
+    padding: 1rem;
+    grid-column: 2/-1;
+}
+.footer__historia{
+        background-color: $color_principal;
+        margin: 0px auto;
+        text-align: center;
+        bottom: auto;     
+}
+/* MEDIA QUERIES MOVIL 320px DE HISTORIA*/
+@media (min-width: 320px) and (max-width: 599px){
+    .header__img {
+        margin: 0 3rem 0 2rem;
+    }
+    .articulo__ragnarok {
+        width: 350px;
+        height: auto;
+        padding: 1rem;
+        margin: 0;
+    }
+    .articulo__kratos {
+        width: 350px;
+        height: auto;
+        padding: 1rem;
+        margin: 0;
+    }
+    .historia__imagen{
+        display: flex;
+        flex-direction: column;
+        background-size: 870%;
+        margin: 0 0 0 1rem;
+        }
+        
+        .historia__fondo{
+            height: 100%;
+           
+       }
+}
+/* MEDIA QUERIES DE TABLET 768px HISTORIA*/
+@media (min-width: 600px) and (max-width: 1023px){
+
+ .header__img {
+        margin: 0 3rem 0 2rem;
+    }
+    .articulo__ragnarok {
+        width: 350px;
+        height: auto;
+        padding: 1rem;
+        margin: 0;
+    }
+    .articulo__kratos {
+        width: 350px;
+        height: auto;
+        padding: 1rem;
+        margin: 0;
+    }
+    .historia__imagen{
+        background-size: 230%;
+        }
+        
+        .historia__fondo{
+            height: 100%;
+           
+       }
+}
+
+/* CSS DE PERSONAJES.HTML */
+.body__personajes{
+    background-color: $color_principal;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(3,auto);
+}
+.contenedor__personaje{
+    margin: 0 5rem 0 5rem;
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.personaje{
+    display: grid;
+    &:hover {
+        transition: 1s;
+        transform: scale(1.05);
+    }
+}
+
+.personaje__imagen{
+    height: 700px;
+    border-radius: 2rem;
+    margin: 1rem 0;
+}
+.personaje__descripcion{
+    position: relative;
+    height: 100%;
+    transition: all .3s;  
+} 
+.personaje__parrafo{
+    position:absolute;
+    width: 90%;
+    height: 70rem;
+    font-family: Norse;
+    font-size: 1.7rem;
+    color: $color_fuente;
+    padding: 20rem 1rem;
+    bottom: 0rem;
+    opacity: 0;
+    margin: 0 1rem;
+   
+}
+.personaje__parrafo:hover{
+    transform: 1.05;
+    opacity: 1;
+    background: $color_hover;
+    border-radius: 1rem;
+    
+}
+/* MEDIA QUERIES MOVIL 320px DE personajes*/
+@media (min-width: 320px) and (max-width: 599px){
+.contenedor__personaje {
+    padding: 1.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10,1fr);
+}
+}
+/* MEDIA QUERIES DE TABLET 768px PERSONAJES*/
+@media (min-width: 600px) and (max-width: 1023px){
+.contenedor__personaje {
+    margin: 0 5rem 0 8rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(5,1fr);
+}
+}
+/* CSS DE MULTIMEDIA.HTML */
+.body__multimedia{
+    background-color: $color_principal;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4auto);
+}
+.multimedia__imagen{
+    width: 33rem;
+    margin-top: 1rem;
+    transition: 1s;
+    border-radius: 1rem;
+    &:hover{
+        transform: scale(2);
+        transition: 1s;
+}
+}
+.contenedor__multimedia{
+    display: flex;
+    padding: 0.1rem;
+    grid-row: 2/-1;
+}
+.multimedia__columna{
+    flex: 25%;
+    padding: 1rem;
+}
+.multimedia__video{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 50%;
+    width: 140rem;
+    grid-row: 3/-1;
+}
+.video{
+    width: 80rem;
+    height: 40rem;
+    padding: 1rem;
+}
+/* MEDIA QUERIES MOVIL 320px DE MULTIMEDIA*/
+@media (min-width: 320px) and (max-width: 599px){
+.multimedia__columna {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.multimedia__video {
+    flex-direction: column;
+    width: auto;
+}
+.video {
+    width: auto;
+    height: auto;
+    padding: 1rem;
+}
+.contenedor__multimedia {
+    display: grid;
+}
+}
+/* MEDIA QUERIES DE TABLET 768px MULTIMEDIA*/
+@media (min-width: 600px) and (max-width: 1023px){
+.multimedia__video{
+    width: auto;
+}
+.video {
+    width: auto;
+    height: auto;
+}
+.contenedor__multimedia {
+    display: grid;  
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+}
+.multimedia__columna {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+}
+/* CSS DE CONTACTO.HTML */
+.body__contacto{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,auto);
+    background-color: $color_principal;
+}
+.contacto__fondo{
+    background-color: $color_principal;
+    grid-row: 2;
+}
+.contacto__imagen{
+    background-image: url(../Imagenes/Multimedia/multimedia-1.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 58rem;
+    background-size: 135rem;
+    border-radius: 5rem;
+    margin: 0 6rem;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.contacto__form{
+    width: 40rem;
+    height: 52rem;
+    margin: 4rem 6rem 2rem 6rem;
+    padding: 1rem;
+    background-color: $color_hover;
+    border-radius: 3rem;
+
+}
+.textArea{
+    background-color: $color_hover;
+    height: 3rem;
+    width: 25rem;
+    font-family: norse;
+    font-size: 2rem;
+    color:rgb(182, 182, 182);
+    margin: 0.2rem;
+}
+.BoxTextArea{
+    background-color: $color_hover;
+    height: 10rem;
+    width: 35rem;
+    font-family: norse;
+    font-size: 2rem;
+    color:rgb(182, 182, 182);
+    text-align: left;
+    margin: 1rem;
+
+}
+.btn{
+    background-color: black;
+    width: 9rem;
+    height: 3rem;
+    font-family: norse;
+    font-size: 2.2rem;
+    color: $color_fuente;
+}
+/* MEDIA QUERIES MOVIL 320px DE CONTACTO*/
+@media (min-width: 320px) and (max-width: 599px){
+.contacto__imagen {
+    height: auto;
+    width: 100vw;
+    margin: 0 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.contacto__form {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+.textArea {
+    height: auto;
+    width: auto;
+}
+.BoxTextArea {
+    height: auto;
+    width: 30rem;
+}
+}
