@@ -10,14 +10,13 @@
     font-family: Norse;
     src: url(../Berserker-Regular.otf);
 }
-/* VARIABLES */
-$color_principal:black;
+$color_principal: black;
 $color_hover:rgba(0, 0, 0, 0.6);
-$color_fuente: white;
+$color_fuente:white;
 
 
 .color__fondo{
-   background-color: black;
+   background-color: $color_principal;
 }
 
 
@@ -26,13 +25,18 @@ $color_fuente: white;
     font-size: 2rem;
     color: $color_fuente;
 }
+.parrafo__black{
+    font-family: Norse;
+    font-size: 2rem;
+    color: $color_principal;
+}
 /* CSS DE INDEX.HTML */
 .body__index{
     height: 100%;
     background-color: $color_principal;
     display: grid;
     gap: 1rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(3,auto);
 }
 .header__contenedor{
@@ -88,11 +92,10 @@ $color_fuente: white;
     height: auto;
     justify-content: center;
     width: 90vw;
-    margin: 0 0 0 7rem;
 }
 .resumen__img{
     border-radius: 1rem;
-   height: 240px;
+   height: 150px;
    
 }
 
@@ -113,20 +116,21 @@ $color_fuente: white;
         grid-template-columns: 1fr;
     }
     .header__contenedor{
-        width: 380px;
+        width: auto;
         
     }
     .header__img{
-        margin: 0 3rem 0 6rem;
+        margin: 0;
+        width: 330px;
+        margin: 0 1rem;
     }
-
     .resumen__div{
         width: 35rem;
         margin: 2rem 0;
     }
     .menu__ul{
         display: block; 
-        padding: 3rem;
+
     }
     .resumen{
         height: auto;
@@ -135,7 +139,7 @@ $color_fuente: white;
     .resumen__principal{
     flex-direction: column;
     justify-content: center;
-    padding: 3rem;
+    padding: 0;
     }
     .contenedor__imagen{
         overflow: hidden;
@@ -144,17 +148,21 @@ $color_fuente: white;
         border-radius: 5rem;
         display: flex;
         justify-content: center;
-        margin: 3rem;
+        margin: 0;
 
     }
     .resumen__imginicio{
        height: auto;
        width: 900px;
+       margin: 0;
     }
     .resumen__img{
         border-radius: 1rem;
-       height: 200px;
+       height: 180px;
        
+    }
+    .resumen__parrafo{
+        width: 350px;
     }
     .header__div{
         display: flex;
@@ -169,11 +177,11 @@ $color_fuente: white;
         margin-left:1rem;
         padding: 0.5rem;
     }
-    .header__img{
-        height: auto;
-        width: 350px;  
-     }
+    .header__imagen{
+        width: 330px;
+    }
 }
+
 /* MEDIA QUERIES DE TABLET 768px INDEX*/
 @media (min-width: 600px) and (max-width: 1023px){
 
@@ -248,17 +256,14 @@ $color_fuente: white;
 }
 /* MEDIA QUERIES MOVIL 320px DE HISTORIA*/
 @media (min-width: 320px) and (max-width: 599px){
-    .header__img {
-        margin: 0 3rem 0 2rem;
-    }
     .articulo__ragnarok {
-        width: 350px;
+        width: 370px;
         height: auto;
         padding: 1rem;
         margin: 0;
     }
     .articulo__kratos {
-        width: 350px;
+        width: 370px;
         height: auto;
         padding: 1rem;
         margin: 0;
@@ -318,12 +323,11 @@ $color_fuente: white;
 }
 .personaje{
     display: grid;
-    &:hover {
-        transition: 1s;
-        transform: scale(1.05);
-    }
+&:hover {
+    transition: 1s;
+    transform: scale(1.05);
 }
-
+}
 .personaje__imagen{
     height: 700px;
     border-radius: 2rem;
@@ -345,14 +349,13 @@ $color_fuente: white;
     bottom: 0rem;
     opacity: 0;
     margin: 0 1rem;
-   
-}
-.personaje__parrafo:hover{
+&:hover{
     transform: 1.05;
     opacity: 1;
     background: $color_hover;
     border-radius: 1rem;
     
+}
 }
 /* MEDIA QUERIES MOVIL 320px DE personajes*/
 @media (min-width: 320px) and (max-width: 599px){
@@ -360,6 +363,13 @@ $color_fuente: white;
     padding: 1.5rem;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(10,1fr);
+}
+.personaje__imagen{
+    margin: 1rem 5rem;
+}
+.personaje__parrafo{
+    margin: 0 5.5rem;
+    width: 70%;
 }
 }
 /* MEDIA QUERIES DE TABLET 768px PERSONAJES*/
@@ -381,10 +391,10 @@ $color_fuente: white;
     width: 33rem;
     margin-top: 1rem;
     transition: 1s;
-    border-radius: 1rem;
-    &:hover{
-        transform: scale(2);
-        transition: 1s;
+    border-radius: 3rem;
+&:hover{
+    transform: scale(2);
+    transition: 1s;
 }
 }
 .contenedor__multimedia{
@@ -474,7 +484,7 @@ $color_fuente: white;
 .contacto__form{
     width: 40rem;
     height: 52rem;
-    margin: 4rem 6rem 2rem 6rem;
+    margin: 2rem 6rem 2rem 6rem;
     padding: 1rem;
     background-color: $color_hover;
     border-radius: 3rem;
@@ -501,7 +511,7 @@ $color_fuente: white;
 
 }
 .btn{
-    background-color: black;
+    background-color: $color_principal;
     width: 9rem;
     height: 3rem;
     font-family: norse;
