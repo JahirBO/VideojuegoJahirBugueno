@@ -10,37 +10,45 @@
     font-family: Norse;
     src: url(../Berserker-Regular.otf);
 }
-$color_principal: black;
-$color_hover:rgba(0, 0, 0, 0.6);
-$color_fuente:white;
+// MAPA DE ESTILOS
 
+$estilos: (
+color_principal: black,
+color_hover:rgba(0, 0, 0, 0.6),
+color_fuente:white
+);
+
+@mixin tamaño ($ancho,$alto) {
+    width: $ancho;
+    height: $alto;
+    
+}
 
 .color__fondo{
-   background-color: $color_principal;
+   background-color: map-get($estilos, color_principal );
 }
 
 
 .parrafo{
     font-family: Norse;
     font-size: 2rem;
-    color: $color_fuente;
+    color: map-get($estilos, color_fuente );
 }
 .parrafo__black{
-    font-family: Norse;
-    font-size: 2rem;
-    color: $color_principal;
+    @extend .parrafo;
+    color: map-get($estilos, color_principal );
 }
 /* CSS DE INDEX.HTML */
 .body__index{
     height: 100%;
-    background-color: $color_principal;
+    background-color: map-get($estilos, color_principal );
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3,auto);
 }
 .header__contenedor{
-    background-color: $color_principal;
+    background-color: map-get($estilos, color_principal );
     width: 100%;
     clear: both;
     contain: '';
@@ -72,7 +80,7 @@ $color_fuente:white;
     text-transform: uppercase;
     font-family: Norse;
     font-size: 2.2rem;
-    color: $color_fuente;
+    color: map-get($estilos, color_fuente);
     margin: 1rem;
 }
 .resumen{
@@ -100,7 +108,7 @@ $color_fuente:white;
 }
 
 .iconos{
-    background-color: $color_principal;
+    background-color:map-get($estilos, color_principal );
     margin: 0px auto;
     text-align: center;
     bottom: auto;
@@ -133,8 +141,7 @@ $color_fuente:white;
 
     }
     .resumen{
-        height: auto;
-        width: auto;
+        @include tamaño(auto,auto);
     }
     .resumen__principal{
     flex-direction: column;
@@ -143,8 +150,7 @@ $color_fuente:white;
     }
     .contenedor__imagen{
         overflow: hidden;
-        height: auto;
-        width: 350px;
+        @include tamaño(350px,auto);
         border-radius: 5rem;
         display: flex;
         justify-content: center;
@@ -152,8 +158,7 @@ $color_fuente:white;
 
     }
     .resumen__imginicio{
-       height: auto;
-       width: 900px;
+        @include tamaño(900px,auto);
        margin: 0;
     }
     .resumen__img{
@@ -208,7 +213,7 @@ $color_fuente:white;
 
 /* CSS DE HISTORIA.HTML */
 .body__historia{
-    background-color: $color_principal;
+    background-color: map-get($estilos, color_principal );
     height: 80rem;
     display: grid;
     grid-template-columns: 1fr;
@@ -216,7 +221,7 @@ $color_fuente:white;
 }
 .historia__fondo{
      height: 55rem;
-    background-color: $color_principal;
+    background-color: map-get($estilos, color_principal );
     grid-row: 2/2;
     
 }
@@ -233,23 +238,21 @@ $color_fuente:white;
     grid-template-rows: 1fr;
     }
 .articulo__ragnarok{
-    width: 50rem;
-    height: 49rem;
+    @include tamaño(50rem,49rem);
     text-align: center;
     margin: 3rem 6rem 5rem 0rem;
     padding: 1rem;
     grid-column: 1/1;
 }
 .articulo__kratos{
-    width: 50rem;
-    height: 49rem;
+    @include tamaño(50rem,49rem);
     text-align: center;
     margin: 3rem 0rem 5rem 6rem;
     padding: 1rem;
     grid-column: 2/-1;
 }
 .footer__historia{
-        background-color: $color_principal;
+        background-color: map-get($estilos, color_principal );
         margin: 0px auto;
         text-align: center;
         bottom: auto;     
@@ -257,14 +260,12 @@ $color_fuente:white;
 /* MEDIA QUERIES MOVIL 320px DE HISTORIA*/
 @media (min-width: 320px) and (max-width: 599px){
     .articulo__ragnarok {
-        width: 370px;
-        height: auto;
+        @include tamaño(370px,auto);
         padding: 1rem;
         margin: 0;
     }
     .articulo__kratos {
-        width: 370px;
-        height: auto;
+        @include tamaño(350px,auto);
         padding: 1rem;
         margin: 0;
     }
@@ -287,14 +288,12 @@ $color_fuente:white;
         margin: 0 3rem 0 2rem;
     }
     .articulo__ragnarok {
-        width: 350px;
-        height: auto;
+        @include tamaño(350px,auto);
         padding: 1rem;
         margin: 0;
     }
     .articulo__kratos {
-        width: 350px;
-        height: auto;
+        @include tamaño(350px,auto);
         padding: 1rem;
         margin: 0;
     }
@@ -310,7 +309,7 @@ $color_fuente:white;
 
 /* CSS DE PERSONAJES.HTML */
 .body__personajes{
-    background-color: $color_principal;
+    background-color: map-get($estilos, color_principal );
     display: grid;
     grid-template-columns:1fr;
     grid-template-rows: repeat(3,auto);
@@ -340,11 +339,10 @@ $color_fuente:white;
 } 
 .personaje__parrafo{
     position:absolute;
-    width: 90%;
-    height: 70rem;
+    @include tamaño(90%,70rem);
     font-family: Norse;
     font-size: 1.7rem;
-    color: $color_fuente;
+    color: map-get($estilos , color_fuente);
     padding: 20rem 1rem;
     bottom: 0rem;
     opacity: 0;
@@ -352,7 +350,7 @@ $color_fuente:white;
 &:hover{
     transform: 1.05;
     opacity: 1;
-    background: $color_hover;
+    background: map-get($estilos, color_hover );;
     border-radius: 1rem;
     
 }
@@ -382,7 +380,7 @@ $color_fuente:white;
 }
 /* CSS DE MULTIMEDIA.HTML */
 .body__multimedia{
-    background-color: $color_principal;
+    background-color: map-get($estilos, color_principal );
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4auto);
@@ -415,8 +413,7 @@ $color_fuente:white;
     grid-row: 3/-1;
 }
 .video{
-    width: 80rem;
-    height: 40rem;
+    @include tamaño(80rem,40rem);
     padding: 1rem;
 }
 /* MEDIA QUERIES MOVIL 320px DE MULTIMEDIA*/
@@ -431,8 +428,7 @@ $color_fuente:white;
     width: auto;
 }
 .video {
-    width: auto;
-    height: auto;
+    @include tamaño(auto,auto);
     padding: 1rem;
 }
 .contenedor__multimedia {
@@ -445,8 +441,7 @@ $color_fuente:white;
     width: auto;
 }
 .video {
-    width: auto;
-    height: auto;
+    @include tamaño(auto,auto);
 }
 .contenedor__multimedia {
     display: grid;  
@@ -464,10 +459,10 @@ $color_fuente:white;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3,auto);
-    background-color: $color_principal;
+    background-color: map-get($estilos, color_principal );
 }
 .contacto__fondo{
-    background-color: $color_principal;
+    background-color: map-get($estilos, color_principal);
     grid-row: 2;
 }
 .contacto__imagen{
@@ -482,27 +477,24 @@ $color_fuente:white;
     flex-direction: row-reverse;
 }
 .contacto__form{
-    width: 40rem;
-    height: 52rem;
+    @include tamaño(40rem,52rem);
     margin: 2rem 6rem 2rem 6rem;
     padding: 1rem;
-    background-color: $color_hover;
+    background-color: map-get($estilos, color_hover);
     border-radius: 3rem;
 
 }
 .textArea{
-    background-color: $color_hover;
-    height: 3rem;
-    width: 25rem;
+    background-color: map-get($estilos, color_hover);
+    @include tamaño(25rem,3rem);
     font-family: norse;
     font-size: 2rem;
     color:rgb(182, 182, 182);
     margin: 0.2rem;
 }
 .BoxTextArea{
-    background-color: $color_hover;
-    height: 10rem;
-    width: 35rem;
+    background-color: map-get($estilos, color_hover);
+    @include tamaño(35rem,10rem);
     font-family: norse;
     font-size: 2rem;
     color:rgb(182, 182, 182);
@@ -511,34 +503,29 @@ $color_fuente:white;
 
 }
 .btn{
-    background-color: $color_principal;
-    width: 9rem;
-    height: 3rem;
+    background-color: map-get($estilos, color_fuente );
+    @include tamaño(9rem,3rem);
     font-family: norse;
     font-size: 2.2rem;
-    color: $color_fuente;
+    color: map-get($estilos, color_fuente);
 }
 /* MEDIA QUERIES MOVIL 320px DE CONTACTO*/
 @media (min-width: 320px) and (max-width: 599px){
 .contacto__imagen {
-    height: auto;
-    width: 100vw;
+    @include tamaño(100vw,auto);
     margin: 0 0.5rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .contacto__form {
-    width: auto;
-    height: auto;
+    @include tamaño(auto,auto);
     margin: 0;
 }
 .textArea {
-    height: auto;
-    width: auto;
+    @include tamaño(auto,auto);
 }
 .BoxTextArea {
-    height: auto;
-    width: 30rem;
+    @include tamaño(30rem,auto);
 }
 }

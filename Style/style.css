@@ -12,14 +12,12 @@
 .color__fondo {
   background-color: black; }
 
-.parrafo {
+.parrafo, .parrafo__black {
   font-family: Norse;
   font-size: 2rem;
   color: white; }
 
 .parrafo__black {
-  font-family: Norse;
-  font-size: 2rem;
   color: black; }
 
 /* CSS DE INDEX.HTML */
@@ -112,23 +110,23 @@
   .menu__ul {
     display: block; }
   .resumen {
-    height: auto;
-    width: auto; }
+    width: auto;
+    height: auto; }
   .resumen__principal {
     flex-direction: column;
     justify-content: center;
     padding: 0; }
   .contenedor__imagen {
     overflow: hidden;
-    height: auto;
     width: 350px;
+    height: auto;
     border-radius: 5rem;
     display: flex;
     justify-content: center;
     margin: 0; }
   .resumen__imginicio {
-    height: auto;
     width: 900px;
+    height: auto;
     margin: 0; }
   .resumen__img {
     border-radius: 1rem;
@@ -220,7 +218,7 @@
     padding: 1rem;
     margin: 0; }
   .articulo__kratos {
-    width: 370px;
+    width: 350px;
     height: auto;
     padding: 1rem;
     margin: 0; }
@@ -418,8 +416,8 @@
 
 .textArea {
   background-color: rgba(0, 0, 0, 0.6);
-  height: 3rem;
   width: 25rem;
+  height: 3rem;
   font-family: norse;
   font-size: 2rem;
   color: #b6b6b6;
@@ -427,8 +425,8 @@
 
 .BoxTextArea {
   background-color: rgba(0, 0, 0, 0.6);
-  height: 10rem;
   width: 35rem;
+  height: 10rem;
   font-family: norse;
   font-size: 2rem;
   color: #b6b6b6;
@@ -436,7 +434,7 @@
   margin: 1rem; }
 
 .btn {
-  background-color: black;
+  background-color: white;
   width: 9rem;
   height: 3rem;
   font-family: norse;
@@ -446,8 +444,8 @@
 /* MEDIA QUERIES MOVIL 320px DE CONTACTO*/
 @media (min-width: 320px) and (max-width: 599px) {
   .contacto__imagen {
-    height: auto;
     width: 100vw;
+    height: auto;
     margin: 0 0.5rem;
     display: flex;
     flex-direction: row;
@@ -457,8 +455,8 @@
     height: auto;
     margin: 0; }
   .textArea {
-    height: auto;
-    width: auto; }
+    width: auto;
+    height: auto; }
   .BoxTextArea {
-    height: auto;
-    width: 30rem; } }
+    width: 30rem;
+    height: auto; } }
