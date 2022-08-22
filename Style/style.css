@@ -9,9 +9,12 @@
   font-family: Norse;
   src: url(../Berserker-Regular.otf); }
 
+/* MAPAS DE ESTILOS */
+/* MIXIN*/
 .color__fondo {
   background-color: black; }
 
+/* FUENTE */
 .parrafo, .parrafo__black {
   font-family: Norse;
   font-size: 2rem;
@@ -28,33 +31,29 @@
   gap: 1rem;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto); }
-
-.header__contenedor {
-  background-color: black;
-  width: 100%;
-  clear: both;
-  contain: '';
-  display: grid;
-  grid-column: 1/-1; }
+  .body__index .header__contenedor {
+    background-color: black;
+    width: 100%;
+    clear: both;
+    contain: '';
+    display: grid;
+    grid-column: 1/-1; }
 
 .header__div {
   width: 90rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between; }
-
-.header__img {
-  height: 12rem; }
-
-.menu__ul {
-  display: flex; }
-
-.menu__list {
-  list-style: none;
-  margin: 1.5rem 0;
-  margin-left: 2.5rem;
-  padding: 2.5rem 0;
-  flex-direction: column; }
+  .header__div .header__img {
+    height: 12rem; }
+  .header__div .menu__ul {
+    display: flex; }
+  .header__div .menu__list {
+    list-style: none;
+    margin: 1.5rem 0;
+    margin-left: 2.5rem;
+    padding: 2.5rem 0;
+    flex-direction: column; }
 
 .subtitulo {
   text-transform: uppercase;
@@ -65,24 +64,20 @@
 
 .resumen {
   grid-row: 2/2; }
-
-.resumen__principal {
-  display: flex;
-  justify-content: center; }
-
-.resumen__div {
-  width: 35rem;
-  margin: 5rem; }
-
-.resumen__imginicio {
-  border-radius: 5rem;
-  height: auto;
-  justify-content: center;
-  width: 90vw; }
-
-.resumen__img {
-  border-radius: 1rem;
-  height: 150px; }
+  .resumen .resumen__principal {
+    display: flex;
+    justify-content: center; }
+  .resumen .resumen__imginicio {
+    border-radius: 5rem;
+    height: auto;
+    justify-content: center;
+    width: 90vw; }
+  .resumen .resumen__div {
+    width: 35rem;
+    margin: 5rem; }
+    .resumen .resumen__div .resumen__img {
+      border-radius: 1rem;
+      height: 150px; }
 
 .iconos {
   background-color: black;
@@ -100,52 +95,52 @@
     grid-template-columns: 1fr; }
   .header__contenedor {
     width: auto; }
-  .header__img {
-    margin: 0;
-    width: 330px;
-    margin: 0 1rem; }
-  .resumen__div {
-    width: 35rem;
-    margin: 2rem 0; }
-  .menu__ul {
-    display: block; }
+    .header__contenedor .header__img {
+      margin: 0;
+      width: 330px;
+      margin: 0 1rem; }
+    .header__contenedor .menu__ul {
+      display: block; }
   .resumen {
     width: auto;
     height: auto; }
-  .resumen__principal {
-    flex-direction: column;
-    justify-content: center;
-    padding: 0; }
-  .contenedor__imagen {
-    overflow: hidden;
-    width: 350px;
-    height: auto;
-    border-radius: 5rem;
-    display: flex;
-    justify-content: center;
-    margin: 0; }
-  .resumen__imginicio {
-    width: 900px;
-    height: auto;
-    margin: 0; }
-  .resumen__img {
-    border-radius: 1rem;
-    height: 180px; }
-  .resumen__parrafo {
-    width: 350px; }
+    .resumen .resumen__principal {
+      flex-direction: column;
+      justify-content: center;
+      padding: 0; }
+      .resumen .resumen__principal .resumen__div {
+        width: 35rem;
+        margin: 2rem 0; }
+        .resumen .resumen__principal .resumen__div .resumen__img {
+          border-radius: 1rem;
+          height: 180px; }
+          .resumen .resumen__principal .resumen__div .resumen__img .resumen__parrafo {
+            width: 350px; }
+    .resumen .contenedor__imagen {
+      overflow: hidden;
+      width: 350px;
+      height: auto;
+      border-radius: 5rem;
+      display: flex;
+      justify-content: center;
+      margin: 0; }
+      .resumen .contenedor__imagen .resumen__imginicio {
+        width: 900px;
+        height: auto;
+        margin: 0; }
   .header__div {
     display: flex;
     width: 30rem;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-  .menu__list {
-    list-style: none;
-    margin: 0;
-    margin-left: 1rem;
-    padding: 0.5rem; }
-  .header__imagen {
-    width: 330px; } }
+    .header__div .menu__list {
+      list-style: none;
+      margin: 0;
+      margin-left: 1rem;
+      padding: 0.5rem; }
+    .header__div .header__imagen {
+      width: 330px; } }
 
 /* MEDIA QUERIES DE TABLET 768px INDEX*/
 @media (min-width: 600px) and (max-width: 1023px) {
@@ -170,45 +165,40 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto); }
-
-.historia__fondo {
-  height: 55rem;
-  background-color: black;
-  grid-row: 2/2; }
-
-.historia__imagen {
-  background-image: url(../Imagenes/Historia.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-  background-size: 100%;
-  border-radius: 5rem;
-  margin: 0 6rem;
-  display: grid;
-  grid-template-columns: 2fr;
-  grid-template-rows: 1fr; }
-
-.articulo__ragnarok {
-  width: 50rem;
-  height: 49rem;
-  text-align: center;
-  margin: 3rem 6rem 5rem 0rem;
-  padding: 1rem;
-  grid-column: 1/1; }
-
-.articulo__kratos {
-  width: 50rem;
-  height: 49rem;
-  text-align: center;
-  margin: 3rem 0rem 5rem 6rem;
-  padding: 1rem;
-  grid-column: 2/-1; }
-
-.footer__historia {
-  background-color: black;
-  margin: 0px auto;
-  text-align: center;
-  bottom: auto; }
+  .body__historia .historia__fondo {
+    height: 55rem;
+    background-color: black;
+    grid-row: 2/2; }
+    .body__historia .historia__fondo .historia__imagen {
+      background-image: url(../Imagenes/Historia.jpeg);
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100%;
+      background-size: 100%;
+      border-radius: 5rem;
+      margin: 0 6rem;
+      display: grid;
+      grid-template-columns: 2fr;
+      grid-template-rows: 1fr; }
+      .body__historia .historia__fondo .historia__imagen .articulo__ragnarok {
+        width: 50rem;
+        height: 49rem;
+        text-align: center;
+        margin: 3rem 6rem 5rem 0rem;
+        padding: 1rem;
+        grid-column: 1/1; }
+      .body__historia .historia__fondo .historia__imagen .articulo__kratos {
+        width: 50rem;
+        height: 49rem;
+        text-align: center;
+        margin: 3rem 0rem 5rem 6rem;
+        padding: 1rem;
+        grid-column: 2/-1; }
+  .body__historia .footer__historia {
+    background-color: black;
+    margin: 0px auto;
+    text-align: center;
+    bottom: auto; }
 
 /* MEDIA QUERIES MOVIL 320px DE HISTORIA*/
 @media (min-width: 320px) and (max-width: 599px) {
@@ -261,39 +251,35 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr); }
-
-.personaje {
-  display: grid; }
-  .personaje:hover {
-    transition: 1s;
-    transform: scale(1.05); }
-
-.personaje__imagen {
-  height: 700px;
-  border-radius: 2rem;
-  margin: 1rem 0; }
-
-.personaje__descripcion {
-  position: relative;
-  height: 100%;
-  transition: all .3s; }
-
-.personaje__parrafo {
-  position: absolute;
-  width: 90%;
-  height: 70rem;
-  font-family: Norse;
-  font-size: 1.7rem;
-  color: white;
-  padding: 20rem 1rem;
-  bottom: 0rem;
-  opacity: 0;
-  margin: 0 1rem; }
-  .personaje__parrafo:hover {
-    transform: 1.05;
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 1rem; }
+  .contenedor__personaje .personaje {
+    display: grid; }
+    .contenedor__personaje .personaje:hover {
+      transition: 1s;
+      transform: scale(1.05); }
+    .contenedor__personaje .personaje .personaje__imagen {
+      height: 700px;
+      border-radius: 2rem;
+      margin: 1rem 0; }
+    .contenedor__personaje .personaje .personaje__descripcion {
+      position: relative;
+      height: 100%;
+      transition: all .3s; }
+      .contenedor__personaje .personaje .personaje__descripcion .personaje__parrafo {
+        position: absolute;
+        width: 90%;
+        height: 70rem;
+        font-family: Norse;
+        font-size: 1.7rem;
+        color: white;
+        padding: 20rem 1rem;
+        bottom: 0rem;
+        opacity: 0;
+        margin: 0 1rem; }
+        .contenedor__personaje .personaje .personaje__descripcion .personaje__parrafo:hover {
+          transform: 1.05;
+          opacity: 1;
+          background: rgba(0, 0, 0, 0.6);
+          border-radius: 1rem; }
 
 /* MEDIA QUERIES MOVIL 320px DE personajes*/
 @media (min-width: 320px) and (max-width: 599px) {
@@ -405,41 +391,37 @@
   margin: 0 6rem;
   display: flex;
   flex-direction: row-reverse; }
-
-.contacto__form {
-  width: 40rem;
-  height: 52rem;
-  margin: 2rem 6rem 2rem 6rem;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 3rem; }
-
-.textArea {
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 25rem;
-  height: 3rem;
-  font-family: norse;
-  font-size: 2rem;
-  color: #b6b6b6;
-  margin: 0.2rem; }
-
-.BoxTextArea {
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 35rem;
-  height: 10rem;
-  font-family: norse;
-  font-size: 2rem;
-  color: #b6b6b6;
-  text-align: left;
-  margin: 1rem; }
-
-.btn {
-  background-color: white;
-  width: 9rem;
-  height: 3rem;
-  font-family: norse;
-  font-size: 2.2rem;
-  color: white; }
+  .contacto__imagen .contacto__form {
+    width: 40rem;
+    height: 52rem;
+    margin: 2rem 6rem 2rem 6rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 3rem; }
+    .contacto__imagen .contacto__form .textArea {
+      background-color: rgba(0, 0, 0, 0.6);
+      width: 25rem;
+      height: 3rem;
+      font-family: norse;
+      font-size: 2rem;
+      color: #b6b6b6;
+      margin: 0.2rem; }
+    .contacto__imagen .contacto__form .BoxTextArea {
+      background-color: rgba(0, 0, 0, 0.6);
+      width: 35rem;
+      height: 10rem;
+      font-family: norse;
+      font-size: 2rem;
+      color: #b6b6b6;
+      text-align: left;
+      margin: 1rem; }
+    .contacto__imagen .contacto__form .btn {
+      background-color: white;
+      width: 9rem;
+      height: 3rem;
+      font-family: norse;
+      font-size: 2.2rem;
+      color: white; }
 
 /* MEDIA QUERIES MOVIL 320px DE CONTACTO*/
 @media (min-width: 320px) and (max-width: 599px) {

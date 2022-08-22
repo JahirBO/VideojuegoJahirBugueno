@@ -10,7 +10,7 @@
     font-family: Norse;
     src: url(../Berserker-Regular.otf);
 }
-// MAPA DE ESTILOS
+/* MAPAS DE ESTILOS */
 
 $estilos: (
 color_principal: black,
@@ -18,6 +18,7 @@ color_hover:rgba(0, 0, 0, 0.6),
 color_fuente:white
 );
 
+/* MIXIN*/
 @mixin tamaño ($ancho,$alto) {
     width: $ancho;
     height: $alto;
@@ -28,7 +29,7 @@ color_fuente:white
    background-color: map-get($estilos, color_principal );
 }
 
-
+/* FUENTE */
 .parrafo{
     font-family: Norse;
     font-size: 2rem;
@@ -46,36 +47,39 @@ color_fuente:white
     gap: 1rem;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3,auto);
+    .header__contenedor{
+        background-color: map-get($estilos, color_principal );
+        width: 100%;
+        clear: both;
+        contain: '';
+        display: grid;
+        grid-column:  1/-1;
+        
+    }
 }
-.header__contenedor{
-    background-color: map-get($estilos, color_principal );
-    width: 100%;
-    clear: both;
-    contain: '';
-    display: grid;
-    grid-column:  1/-1;
-    
-}
+
 .header__div{
     width: 90rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    .header__img{
+        height: 12rem;
+        
+    }
+    .menu__ul{
+        display: flex; 
+    }
+    .menu__list{
+        list-style: none;
+        margin: 1.5rem 0;
+        margin-left: 2.5rem;
+        padding: 2.5rem 0;
+        flex-direction: column;
+    }
 }
-.header__img{
-    height: 12rem;
-    
-}
-.menu__ul{
-    display: flex; 
-}
-.menu__list{
-    list-style: none;
-    margin: 1.5rem 0;
-    margin-left: 2.5rem;
-    padding: 2.5rem 0;
-    flex-direction: column;
-}
+
+
 .subtitulo{
     text-transform: uppercase;
     font-family: Norse;
@@ -85,26 +89,25 @@ color_fuente:white
 }
 .resumen{
     grid-row: 2/2;
-}
-.resumen__principal{
-    display: flex;
-    justify-content: center;
-}
-
-.resumen__div{
-    width: 35rem;
-    margin: 5rem;
-}
-.resumen__imginicio{
-    border-radius: 5rem;
-    height: auto;
-    justify-content: center;
-    width: 90vw;
-}
-.resumen__img{
-    border-radius: 1rem;
-   height: 150px;
-   
+    .resumen__principal{
+        display: flex;
+        justify-content: center;
+    }
+    .resumen__imginicio{
+        border-radius: 5rem;
+        height: auto;
+        justify-content: center;
+        width: 90vw;
+    }
+    .resumen__div{
+        width: 35rem;
+        margin: 5rem;
+        .resumen__img{
+            border-radius: 1rem;
+           height: 150px;
+           
+        }
+    }
 }
 
 .iconos{
@@ -125,66 +128,75 @@ color_fuente:white
     }
     .header__contenedor{
         width: auto;
-        
+        .header__img{
+            margin: 0;
+            width: 330px;
+            margin: 0 1rem;
+        }   
+        .menu__ul{
+            display: block; 
+    
+        }
     }
-    .header__img{
-        margin: 0;
-        width: 330px;
-        margin: 0 1rem;
-    }
-    .resumen__div{
-        width: 35rem;
-        margin: 2rem 0;
-    }
-    .menu__ul{
-        display: block; 
+   
 
-    }
+    
     .resumen{
         @include tamaño(auto,auto);
-    }
-    .resumen__principal{
-    flex-direction: column;
-    justify-content: center;
-    padding: 0;
-    }
-    .contenedor__imagen{
-        overflow: hidden;
-        @include tamaño(350px,auto);
-        border-radius: 5rem;
-        display: flex;
-        justify-content: center;
-        margin: 0;
+        .resumen__principal{
+            flex-direction: column;
+            justify-content: center;
+            padding: 0;
+            .resumen__div{
+                width: 35rem;
+                margin: 2rem 0;
+                .resumen__img{
+                    border-radius: 1rem;
+                   height: 180px;
+                   .resumen__parrafo{
+                    width: 350px;
+                }
+                }
+            }
+            }
+         .contenedor__imagen{
+                overflow: hidden;
+                @include tamaño(350px,auto);
+                border-radius: 5rem;
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                .resumen__imginicio{
+                    @include tamaño(900px,auto);
+                   margin: 0;
+                }
+        
+         }
 
     }
-    .resumen__imginicio{
-        @include tamaño(900px,auto);
-       margin: 0;
-    }
-    .resumen__img{
-        border-radius: 1rem;
-       height: 180px;
-       
-    }
-    .resumen__parrafo{
-        width: 350px;
-    }
+
+
+
+
+
     .header__div{
         display: flex;
         width: 30rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        .menu__list{
+            list-style: none;
+            margin: 0;
+            margin-left:1rem;
+            padding: 0.5rem;
+        }
+        .header__imagen{
+            width: 330px;
+        }
     }
-    .menu__list{
-        list-style: none;
-        margin: 0;
-        margin-left:1rem;
-        padding: 0.5rem;
-    }
-    .header__imagen{
-        width: 330px;
-    }
+
+
 }
 
 /* MEDIA QUERIES DE TABLET 768px INDEX*/
@@ -218,45 +230,48 @@ color_fuente:white
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3,auto);
-}
-.historia__fondo{
-     height: 55rem;
+    .historia__fondo{
+        height: 55rem;
+       background-color: map-get($estilos, color_principal );
+       grid-row: 2/2;
+       .historia__imagen{
+        background-image: url(../Imagenes/Historia.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        background-size: 100%;
+        border-radius: 5rem;
+        margin: 0 6rem;
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 1fr;
+        .articulo__ragnarok{
+            @include tamaño(50rem,49rem);
+            text-align: center;
+            margin: 3rem 6rem 5rem 0rem;
+            padding: 1rem;
+            grid-column: 1/1;
+        }
+        .articulo__kratos{
+            @include tamaño(50rem,49rem);
+            text-align: center;
+            margin: 3rem 0rem 5rem 6rem;
+            padding: 1rem;
+            grid-column: 2/-1;
+        }
+        }
+   }
+   .footer__historia{
     background-color: map-get($estilos, color_principal );
-    grid-row: 2/2;
-    
-}
-.historia__imagen{
-    background-image: url(../Imagenes/Historia.jpeg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-    background-size: 100%;
-    border-radius: 5rem;
-    margin: 0 6rem;
-    display: grid;
-    grid-template-columns: 2fr;
-    grid-template-rows: 1fr;
-    }
-.articulo__ragnarok{
-    @include tamaño(50rem,49rem);
+    margin: 0px auto;
     text-align: center;
-    margin: 3rem 6rem 5rem 0rem;
-    padding: 1rem;
-    grid-column: 1/1;
+    bottom: auto;     
 }
-.articulo__kratos{
-    @include tamaño(50rem,49rem);
-    text-align: center;
-    margin: 3rem 0rem 5rem 6rem;
-    padding: 1rem;
-    grid-column: 2/-1;
 }
-.footer__historia{
-        background-color: map-get($estilos, color_principal );
-        margin: 0px auto;
-        text-align: center;
-        bottom: auto;     
-}
+
+
+
+
 /* MEDIA QUERIES MOVIL 320px DE HISTORIA*/
 @media (min-width: 320px) and (max-width: 599px){
     .articulo__ragnarok {
@@ -319,13 +334,11 @@ color_fuente:white
     display: grid;
     grid-template-columns:repeat(5,1fr);
     grid-template-rows: repeat(2,1fr);
-}
-.personaje{
+    .personaje{
     display: grid;
 &:hover {
     transition: 1s;
     transform: scale(1.05);
-}
 }
 .personaje__imagen{
     height: 700px;
@@ -335,26 +348,31 @@ color_fuente:white
 .personaje__descripcion{
     position: relative;
     height: 100%;
-    transition: all .3s;  
+    transition: all .3s; 
+    .personaje__parrafo{
+        position:absolute;
+        @include tamaño(90%,70rem);
+        font-family: Norse;
+        font-size: 1.7rem;
+        color: map-get($estilos , color_fuente);
+        padding: 20rem 1rem;
+        bottom: 0rem;
+        opacity: 0;
+        margin: 0 1rem;
+    &:hover{
+        transform: 1.05;
+        opacity: 1;
+        background: map-get($estilos, color_hover );;
+        border-radius: 1rem;
+        
+    }
+    } 
 } 
-.personaje__parrafo{
-    position:absolute;
-    @include tamaño(90%,70rem);
-    font-family: Norse;
-    font-size: 1.7rem;
-    color: map-get($estilos , color_fuente);
-    padding: 20rem 1rem;
-    bottom: 0rem;
-    opacity: 0;
-    margin: 0 1rem;
-&:hover{
-    transform: 1.05;
-    opacity: 1;
-    background: map-get($estilos, color_hover );;
-    border-radius: 1rem;
-    
 }
 }
+
+
+
 /* MEDIA QUERIES MOVIL 320px DE personajes*/
 @media (min-width: 320px) and (max-width: 599px){
 .contenedor__personaje {
@@ -475,40 +493,42 @@ color_fuente:white
     margin: 0 6rem;
     display: flex;
     flex-direction: row-reverse;
+    .contacto__form{
+        @include tamaño(40rem,52rem);
+        margin: 2rem 6rem 2rem 6rem;
+        padding: 1rem;
+        background-color: map-get($estilos, color_hover);
+        border-radius: 3rem;
+        .textArea{
+            background-color: map-get($estilos, color_hover);
+            @include tamaño(25rem,3rem);
+            font-family: norse;
+            font-size: 2rem;
+            color:rgb(182, 182, 182);
+            margin: 0.2rem;
+        }
+        .BoxTextArea{
+            background-color: map-get($estilos, color_hover);
+            @include tamaño(35rem,10rem);
+            font-family: norse;
+            font-size: 2rem;
+            color:rgb(182, 182, 182);
+            text-align: left;
+            margin: 1rem;
+        
+        }
+        .btn{
+            background-color: map-get($estilos, color_fuente );
+            @include tamaño(9rem,3rem);
+            font-family: norse;
+            font-size: 2.2rem;
+            color: map-get($estilos, color_fuente);
+        }
+    
+    }
 }
-.contacto__form{
-    @include tamaño(40rem,52rem);
-    margin: 2rem 6rem 2rem 6rem;
-    padding: 1rem;
-    background-color: map-get($estilos, color_hover);
-    border-radius: 3rem;
 
-}
-.textArea{
-    background-color: map-get($estilos, color_hover);
-    @include tamaño(25rem,3rem);
-    font-family: norse;
-    font-size: 2rem;
-    color:rgb(182, 182, 182);
-    margin: 0.2rem;
-}
-.BoxTextArea{
-    background-color: map-get($estilos, color_hover);
-    @include tamaño(35rem,10rem);
-    font-family: norse;
-    font-size: 2rem;
-    color:rgb(182, 182, 182);
-    text-align: left;
-    margin: 1rem;
 
-}
-.btn{
-    background-color: map-get($estilos, color_fuente );
-    @include tamaño(9rem,3rem);
-    font-family: norse;
-    font-size: 2.2rem;
-    color: map-get($estilos, color_fuente);
-}
 /* MEDIA QUERIES MOVIL 320px DE CONTACTO*/
 @media (min-width: 320px) and (max-width: 599px){
 .contacto__imagen {
