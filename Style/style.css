@@ -165,40 +165,44 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto); }
-  .body__historia .historia__fondo {
-    height: 55rem;
-    background-color: black;
-    grid-row: 2/2; }
-    .body__historia .historia__fondo .historia__imagen {
-      background-image: url(../Imagenes/Historia.jpeg);
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 100%;
-      background-size: 100%;
-      border-radius: 5rem;
-      margin: 0 6rem;
-      display: grid;
-      grid-template-columns: 2fr;
-      grid-template-rows: 1fr; }
-      .body__historia .historia__fondo .historia__imagen .articulo__ragnarok {
-        width: 50rem;
-        height: 49rem;
-        text-align: center;
-        margin: 3rem 6rem 5rem 0rem;
-        padding: 1rem;
-        grid-column: 1/1; }
-      .body__historia .historia__fondo .historia__imagen .articulo__kratos {
-        width: 50rem;
-        height: 49rem;
-        text-align: center;
-        margin: 3rem 0rem 5rem 6rem;
-        padding: 1rem;
-        grid-column: 2/-1; }
   .body__historia .footer__historia {
     background-color: black;
     margin: 0px auto;
     text-align: center;
     bottom: auto; }
+
+.historia__fondo {
+  height: 55rem;
+  background-color: black;
+  grid-row: 2/2; }
+
+.historia__imagen {
+  background-image: url(../Imagenes/Historia.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  background-size: 100%;
+  border-radius: 5rem;
+  margin: 0 6rem;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr; }
+
+.articulo__ragnarok {
+  width: 50rem;
+  height: 49rem;
+  text-align: center;
+  margin: 3rem 6rem 5rem 0rem;
+  padding: 1rem;
+  grid-column: 1/1; }
+
+.articulo__kratos {
+  width: 50rem;
+  height: 49rem;
+  text-align: center;
+  margin: 3rem 0rem 5rem 6rem;
+  padding: 1rem;
+  grid-column: 2/-1; }
 
 /* MEDIA QUERIES MOVIL 320px DE HISTORIA*/
 @media (min-width: 320px) and (max-width: 599px) {
@@ -391,37 +395,41 @@
   margin: 0 6rem;
   display: flex;
   flex-direction: row-reverse; }
-  .contacto__imagen .contacto__form {
-    width: 40rem;
-    height: 52rem;
-    margin: 2rem 6rem 2rem 6rem;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 3rem; }
-    .contacto__imagen .contacto__form .textArea {
-      background-color: rgba(0, 0, 0, 0.6);
-      width: 25rem;
-      height: 3rem;
-      font-family: norse;
-      font-size: 2rem;
-      color: #b6b6b6;
-      margin: 0.2rem; }
-    .contacto__imagen .contacto__form .BoxTextArea {
-      background-color: rgba(0, 0, 0, 0.6);
-      width: 35rem;
-      height: 10rem;
-      font-family: norse;
-      font-size: 2rem;
-      color: #b6b6b6;
-      text-align: left;
-      margin: 1rem; }
-    .contacto__imagen .contacto__form .btn {
-      background-color: white;
-      width: 9rem;
-      height: 3rem;
-      font-family: norse;
-      font-size: 2.2rem;
-      color: white; }
+
+.contacto__form {
+  width: 40rem;
+  height: 52rem;
+  margin: 2rem 6rem 2rem 6rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 3rem; }
+
+.textArea {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 25rem;
+  height: 3rem;
+  font-family: norse;
+  font-size: 2rem;
+  color: #b6b6b6;
+  margin: 0.2rem; }
+
+.BoxTextArea {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 35rem;
+  height: 10rem;
+  font-family: norse;
+  font-size: 2rem;
+  color: #b6b6b6;
+  text-align: left;
+  margin: 1rem; }
+
+.btn {
+  background-color: white;
+  width: 9rem;
+  height: 3rem;
+  font-family: norse;
+  font-size: 2.2rem;
+  color: white; }
 
 /* MEDIA QUERIES MOVIL 320px DE CONTACTO*/
 @media (min-width: 320px) and (max-width: 599px) {
